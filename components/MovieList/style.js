@@ -1,13 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 
-export const StyledDiv = styled.div`
+export const StyledList = styled.ul`
   ul {
-    color: white;
     text-align: center;
     padding: 1rem;
   }
   li {
+    color: white;
     background-color: #436073;
     padding: 2rem;
     list-style: none;
