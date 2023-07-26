@@ -13,5 +13,5 @@ export const StyleHeader = styled.header`
 `;
 
 export const StyleHeaderContainer = styled.div`
-  margin-bottom: 12rem;
+  margin-bottom: 13rem;
 `;
