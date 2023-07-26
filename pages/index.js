@@ -1,11 +1,11 @@
-import Heading from "../components/Heading";
-import SubHeading from "../components/SubHeading";
+import Header from "../components/Header";
+import MovieList from "../components/MovieList";
 
 export default function Home() {
   return (
     <main>
-      <Heading>🏄‍♂️🏄‍♀️🏄 Capstone Template 🏄🏄‍♀️🏄‍♂️</Heading>
-      <SubHeading>Happy hacking!</SubHeading>
+      <Header />
+      <MovieList />
     </main>
   );
 }
