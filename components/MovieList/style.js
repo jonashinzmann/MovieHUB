@@ -15,6 +15,7 @@ export const StyledList = styled.ul`
     font-weight: bold;
     text-align: center;
     border-radius: 1rem;
+    cursor: pointer;
   }
 `;
 
