@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { StyledList, StyledH2, StyledH3 } from "./style";
 import SearchBar from "../SearchBar";
-import fetchMovies from "../../pages/api/movies";
+import MovieDetails from "../MovieDetails";
 
 const MovieSearch = () => {
   const [movies, setMovies] = useState([]);
   const [searchError, setSearchError] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
+  const [selectedMovie, setSelectedMovie] = useState(null);
 
   const handleSearch = async (searchQuery) => {
     setSearchQuery(searchQuery);
@@ -26,14 +27,28 @@ const MovieSearch = () => {
     }
   };
 
+  const handleMovieClick = (movie) => {
+    setSelectedMovie(movie);
+    window.scrollTo({ top: 230, behavior: "smooth" });
+  };
+
+  const handleCloseMovieDetails = () => {
+    setSelectedMovie(null);
+  };
+
   return (
     <div>
       <SearchBar onSearch={handleSearch} />
       {searchError && <StyledH2>No movies found.</StyledH2>}
       {searchQuery && <StyledH3>You searched for: {searchQuery}</StyledH3>}
+      {selectedMovie && (
+        <MovieDetails movie={selectedMovie} onClose={handleCloseMovieDetails} />
+      )}
       <StyledList>
         {movies.map((movie) => (
-          <li key={movie.imdbID}>{movie.Title}</li>
+          <li key={movie.imdbID} onClick={() => handleMovieClick(movie)}>
+            {movie.Title}
+          </li>
         ))}
       </StyledList>
     </div>

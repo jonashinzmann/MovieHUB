@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyleHeader = styled.header`
+export const StyledHeader = styled.header`
   text-align: center;
   background-color: #1a1e26;
   color: white;
@@ -12,6 +12,6 @@ export const StyleHeader = styled.header`
   width: 100%;
 `;
 
-export const StyleHeaderContainer = styled.div`
+export const StyledHeaderContainer = styled.div`
   margin-bottom: 13rem;
 `;

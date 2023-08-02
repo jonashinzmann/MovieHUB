@@ -1,11 +1,11 @@
 import React from "react";
-import { StyleHeader, StyleHeaderContainer } from "./style";
+import { StyledHeader, StyledHeaderContainer } from "./style";
 export default function Header() {
   return (
-    <StyleHeaderContainer>
-      <StyleHeader>
+    <StyledHeaderContainer>
+      <StyledHeader>
         <h1>MovieHUB</h1>
-      </StyleHeader>
-    </StyleHeaderContainer>
+      </StyledHeader>
+    </StyledHeaderContainer>
   );
 }
