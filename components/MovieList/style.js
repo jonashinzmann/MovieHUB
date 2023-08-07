@@ -1,10 +1,9 @@
 import styled from "styled-components";
-import { AiOutlineHeart } from "react-icons/ai";
 
 export const StyledList = styled.ul`
   ul {
     text-align: center;
-    padding: 1.5rem;
+    padding: 1rem;
   }
   li {
     position: relative;
