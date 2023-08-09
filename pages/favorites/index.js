@@ -6,8 +6,13 @@ import {
   StyledForm,
   StyledInput,
   StyledList,
+  StyledMdDeleteOutline,
+  StyledLiaEditSolid,
 } from "./style";
 import { StyledImage } from "../../components/Header/style";
+import { StyledH2 } from "../../components/MovieList/style";
+import { MdDeleteOutline } from "react-icons/md";
+import { LiaEditSolid } from "react-icons/lia";
 
 function FavoritesPage() {
   const [listName, setListName] = useState("");
@@ -29,6 +34,10 @@ function FavoritesPage() {
     setListName("");
   };
 
+  const handleDeleteList = (id) => {
+    setLists(lists.filter((list) => list.id !== id));
+  };
+
   return (
     <div>
       <StyledHeader>Favorites</StyledHeader>
@@ -42,6 +51,7 @@ function FavoritesPage() {
       <StyledForm onSubmit={handleCreateList}>
         <StyledInput
           type="text"
+          required
           placeholder="add a list title"
           value={listName}
           onChange={handleListNameChange}
@@ -49,9 +59,21 @@ function FavoritesPage() {
         <StyledButton type="submit">Add List</StyledButton>
       </StyledForm>
 
-      {lists.map((list) => (
-        <StyledList key={list.id}>{list.name}</StyledList>
-      ))}
+      {lists.length === 0 ? (
+        <StyledH2>No lists created</StyledH2>
+      ) : (
+        lists.map((list) => (
+          <StyledList key={list.id}>
+            {list.name}
+            <StyledLiaEditSolid>
+              <LiaEditSolid />
+            </StyledLiaEditSolid>
+            <StyledMdDeleteOutline onClick={() => handleDeleteList(list.id)}>
+              <MdDeleteOutline />
+            </StyledMdDeleteOutline>
+          </StyledList>
+        ))
+      )}
       <Navigation />
     </div>
   );

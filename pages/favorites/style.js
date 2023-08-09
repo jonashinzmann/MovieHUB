@@ -42,7 +42,7 @@ export const StyledButton = styled.button`
 export const StyledList = styled.ul`
 text-align: center;
 padding: 1rem;
-
+position:relative;
   color: white;
   background-color: #436073;
   padding: 2rem;
@@ -54,4 +54,30 @@ padding: 1rem;
   border-radius: 1rem;
   cursor: pointer;
 }
+`;
+
+export const StyledMdDeleteOutline = styled.div`
+  align-items: center;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 3.125rem;
+  transform: translateY(-50%);
+  border: none;
+  background-color: transparent;
+  color: white;
+  font-size: 2.5rem;
+`;
+
+export const StyledLiaEditSolid = styled.div`
+  align-items: center;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 8rem;
+  transform: translateY(-50%);
+  border: none;
+  background-color: transparent;
+  color: white;
+  font-size: 2.5rem;
 `;

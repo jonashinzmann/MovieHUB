@@ -37,9 +37,8 @@ export const StyledHeart = styled.div`
   position: absolute;
   top: 1rem;
   right: 6rem;
-  color: ${(props) => (props.isLiked ? "red" : "white")};
+  color: ${(props) => (props.isLiked ? "white" : "white")};
   cursor: pointer;
   margin: 0.5rem;
   font-size: 4rem;
-  fill: ${(props) => (props.isLiked ? "red" : "none")};
 `;
