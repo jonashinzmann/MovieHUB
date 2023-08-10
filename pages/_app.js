@@ -8,7 +8,7 @@ export default function App({ Component, pageProps }) {
     <>
       <GlobalStyle />
       <Head>
-        <title>Capstone Project</title>
+        <title>MovieHUB</title>
       </Head>
       <Component {...pageProps} />
     </>

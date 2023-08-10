@@ -62,19 +62,17 @@ const MovieSearch = () => {
           <li key={movie.imdbID} onClick={() => handleMovieClick(movie)}>
             {movie.Title}
             <StyledHeart
-  isLiked={favorites.some((fav) => fav.imdbID === movie.imdbID)}
-  onClick={(event) => {
-    event.stopPropagation();
-    handleAddToFavorites(movie);
-  }}
->
-  {favorites.some((fav) => fav.imdbID === movie.imdbID) ? (
-    <AiFillHeart />
-  ) : (
-    <AiOutlineHeart />
-  )}
-</StyledHeart>
-
+              isLiked={favorites.some((fav) => fav.imdbID === movie.imdbID)}
+              onClick={(event) => {
+                event.stopPropagation();
+                handleAddToFavorites(movie);
+              }}>
+              {favorites.some((fav) => fav.imdbID === movie.imdbID) ? (
+                <AiFillHeart />
+              ) : (
+                <AiOutlineHeart />
+              )}
+            </StyledHeart>
           </li>
         ))}
       </StyledList>

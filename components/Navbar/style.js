@@ -40,4 +40,14 @@ export const Footer = styled.nav`
   a:hover {
     transform: scale(1.3);
   }
+
+  @media (max-width: 768px) {
+    li {
+      margin-right: 1rem;
+    }
+
+    li:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
 `;
