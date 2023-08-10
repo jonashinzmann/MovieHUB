@@ -18,6 +18,18 @@ export const StyledList = styled.ul`
     border-radius: 1rem;
     cursor: pointer;
     top: 3rem;
+
+    @media (max-width: 768px) {
+      font-size: 1.5rem;
+      padding: 1.5rem;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 1.2rem;
+      padding: 1rem;
+      margin: 1rem;
+      top: 2rem;
+    }
   }
 `;
 
@@ -26,11 +38,28 @@ export const StyledH2 = styled.h2`
   justify-content: center;
   font-size: 2rem;
   z-index: 1;
+
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.2rem;
+  }
 `;
+
 export const StyledH3 = styled.h3`
   display: flex;
   justify-content: center;
   font-size: 2rem;
+
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.2rem;
+  }
 `;
 
 export const StyledHeart = styled.div`
@@ -41,4 +70,16 @@ export const StyledHeart = styled.div`
   cursor: pointer;
   margin: 0.5rem;
   font-size: 4rem;
+
+  @media (max-width: 768px) {
+    top: 0.5rem;
+    right: 3rem;
+    font-size: 3rem;
+  }
+
+  @media (max-width: 480px) {
+    top: 0.5rem;
+    right: 2rem;
+    font-size: 2rem;
+  }
 `;
