@@ -37,6 +37,7 @@ function FavoritesPage() {
   }, []);
   const handleCreateList = (event) => {
     event.preventDefault();
+    console.log("List Name:", listName);
 
     const newList = {
       name: listName,
