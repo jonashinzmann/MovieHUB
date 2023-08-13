@@ -10,7 +10,8 @@ export const Footer = styled.nav`
   ul {
     display: flex;
     list-style: none;
-    justify-content: center;
+    justify-content: space-between; /* Position icons on left and right side */
+    align-items: center; /* Align icons vertically */
   }
 
   li {

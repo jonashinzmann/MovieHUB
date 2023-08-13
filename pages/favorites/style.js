@@ -4,8 +4,8 @@ export const StyledHeader = styled.header`
   text-align: center;
   background-color: #1a1e26;
   color: white;
-  padding-top: 1rem;
-  padding-bottom: 3rem;
+  padding-top: rem;
+  padding-bottom: 2.5rem;
   font-size: 2rem;
   font-style: bold;
   position: fixed;
@@ -122,6 +122,16 @@ export const StyledLiaEditSolid = styled.div`
   cursor: pointer;
   position: absolute;
   top: 50%;
-  right: 8rem;
+  right: 5rem;
   transform: translateY(-50%);
+
+  @media (max-width: 768px) {
+    right: 4rem;
+    font-size: 1.5rem;
+  }
+
+  @media (max-width: 480px) {
+    right: 4rem;
+    font-size: 1.5rem;
+  }
 `;
