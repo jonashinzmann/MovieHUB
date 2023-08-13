@@ -2,15 +2,19 @@ import React, { useState, useEffect } from "react";
 import Navigation from "../../components/Navbar";
 import axios from "axios";
 import {
-  StyledHeader,
-  StyledButton,
+  
   StyledForm,
   StyledInput,
   StyledList,
   StyledMdDeleteOutline,
   StyledLiaEditSolid,
+  StyledButton,
 } from "./style";
-import { StyledImage } from "../../components/Header/style";
+import {
+  StyledHeader,
+  StyledHeaderContainer,
+  StyledImage,
+} from "../../components/Header/style";
 import { StyledH2 } from "../../components/MovieList/style";
 import { MdDeleteOutline } from "react-icons/md";
 import { LiaEditSolid } from "react-icons/lia";
@@ -84,13 +88,17 @@ function FavoritesPage() {
 
   return (
     <div>
-      <StyledHeader>Favorites</StyledHeader>
-      <StyledImage
-        src="/favicon.ico"
-        alt="Header Image"
-        width={150}
-        height={90}
-      />
+      <StyledHeaderContainer>
+        <StyledHeader>
+          <h1>Favorites</h1>
+          <StyledImage
+            src="/favicon.ico"
+            alt="Header Image"
+            width={150}
+            height={90}
+          />
+        </StyledHeader>
+      </StyledHeaderContainer>
 
       <StyledForm onSubmit={handleCreateList}>
         <StyledInput
