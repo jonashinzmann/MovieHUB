@@ -38,5 +38,7 @@ export const StyledImage = styled.img`
   @media (max-width: 480px) {
     border-width: 0.3rem;
     border-radius: 0.2rem;
+    width: 50%; /* Add this line to make the image 50% of its original size */
   }
 `;
+
