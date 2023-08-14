@@ -19,21 +19,24 @@ export const StyledList = styled.ul`
     cursor: pointer;
     top: 6rem;
     display: flex;
-    align-items: center; /* Align movie title vertically */
-    word-break: break-word; /* Allow movie title to wrap onto multiple lines */
+    align-items: center;
+    word-break: break-word;
 
     @media (max-width: 768px) {
       font-size: 1.5rem;
       padding: 1.5rem;
       top: 3rem;
-      justify-content: flex-start; /* Align movie title on the left side */
+      justify-content: flex-start;
     }
 
     @media (max-width: 480px) {
-      font-size: 1.2rem;
+      display: flex;
+      flex-direction: column;
+      left: -1.5rem;
+      font-size: 1rem;
       padding: 1rem;
       margin: 1rem;
-      top: 3rem;
+      top: 1rem;
     }
   }
 `;
@@ -69,22 +72,22 @@ export const StyledH3 = styled.h3`
 
 export const StyledHeart = styled.div`
   position: absolute;
-  top: 1rem;
-  right: 1rem;
+  top: 0.5rem;
+  right: 0.5rem;
   color: ${(props) => (props.isLiked ? "white" : "white")};
   cursor: pointer;
   margin: 0.5rem;
   font-size: 4rem;
 
   @media (max-width: 768px) {
-    top: 0.5rem;
-    right: 0.5rem;
+    top: 0.3rem;
+    right: 0.3rem;
     font-size: 3rem;
   }
 
   @media (max-width: 480px) {
-    top: 0.5rem;
-    right: 0.5rem;
-    font-size: 2rem;
+    top: 0rem;
+    right: 0rem;
+    font-size: 1.5rem;
   }
 `;
