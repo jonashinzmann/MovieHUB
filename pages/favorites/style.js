@@ -41,28 +41,28 @@ export const StyledInput = styled.input`
   }
 
   @media (max-width: 480px) {
-    width: 12rem;
+    width: 18rem;
   }
 `;
 
 export const StyledButton = styled.button`
-  background-color: #7693a6;
-  color: white;
-  padding: 0.625rem 1.25rem;
-  border: none;
-  border-radius: 0.313rem;
-  cursor: pointer;
-  width: 9.5rem;
-  font-size: 1rem;
+background-color: #7693a6;
+color: white;
+padding: 0.625rem 1.25rem;
+border: none;
+border-radius: 0.313rem;
+cursor: pointer;
+width: 8rem;
+font-size: 1rem;
 
   @media (max-width: 768px) {
     width: 8rem;
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 
   @media (max-width: 480px) {
-    width: 6rem;
-    font-size: 0.7rem;
+    width: 8rem;
+    font-size: 1rem;
   }
 `;
 

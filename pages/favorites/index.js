@@ -104,7 +104,7 @@ function FavoritesPage() {
         <StyledInput
           type="text"
           required
-          placeholder="add a list title"
+          placeholder="Add a list title"
           value={listName}
           onChange={handleListNameChange}
         />
